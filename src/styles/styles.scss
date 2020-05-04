@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import "variables";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+body {
+  // height: calc(100% - 200px);
+  color: $secondary;
+  height: 100%;
+  overflow: hidden;
+  // padding-top: 50px;
+}

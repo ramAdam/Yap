@@ -1,0 +1,71 @@
+<app-navbar></app-navbar>
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="form-wrapper text-center">
+    <h2 class="mb-4">Sign Up</h2>
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+      <div class="d-flex justify-content-center">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control first-name"
+            id="first-name"
+            placeholder="First Name"
+            formControlName="firstName"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control last-name"
+            id="last-name"
+            placeholder="Last Name"
+            formControlName="lastName"
+          />
+        </div>
+      </div>
+      <div class="form-group">
+        <input
+          type="email"
+          class="form-control"
+          id="email-input"
+          placeholder="Enter Email"
+          formControlName="email"
+        />
+        <!-- email error handler, show error after form submition loginForm.submitted-->
+        <div *ngIf="(email.touched || email.dirty) && email.errors">
+          <small
+            class="d-block form-text text-danger"
+            *ngIf="email.errors.email"
+            >Incorrect email format</small
+          >
+        </div>
+      </div>
+      <div class="form-group">
+        <!-- <label for="passwordInput">Password</label> -->
+        <input
+          type="password"
+          class="form-control"
+          id="password-input"
+          placeholder="Enter Password"
+          formControlName="password"
+        />
+        <div *ngIf="(password.touched || password.dirty) && password.errors">
+          <small
+            class="d-block form-text text-danger"
+            *ngIf="password.errors.minlength"
+            >Minimum password length is at least 8</small
+          >
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="btn btn-primary btn-block"
+        [disabled]="!signUpForm.valid"
+      >
+        Sign Up
+      </button>
+    </form>
+
+    <small><a routerLink="/login">Already have an Account?</a></small>
+  </div>
+</div>
