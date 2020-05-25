@@ -9,7 +9,7 @@
         <button class="btn btn-outline-primary btn-sm mt-3">
           <i class="fas fa-comment-alt"></i>
         </button>
-        <hr style="" class="bg-dark w-100" />
+        <hr class="bg-dark w-100" />
         <button class="btn btn-outline-primary btn-sm mb-2">
           <i class="fas fa-server"></i>
         </button>
@@ -20,6 +20,7 @@
           <i class="fas fa-plus"></i>
         </button>
       </div>
+      <!-- room list -->
       <div id="room-lst" class="col-9 bg-dark border"></div>
     </div>
   </div>
@@ -30,6 +31,34 @@
   <div
     id="bt-navbar"
     [@pop]="isOpen ? 'hide' : 'show'"
-    class="bg-primary"
-  ></div>
+    class="bg-primary container d-flex justify-content-center align-items-center"
+  >
+    <div class="row">
+      <div class="col">
+        <button
+          id="btn-notification"
+          class="btn btn-outline-light btn-sm rounded-circle"
+        >
+          <i class="fas fa-server"></i>
+          <span class="badge-notification px-1">2</span>
+        </button>
+        <button class="btn btn-outline-light btn-sm ml-4 rounded-circle">
+          <i class="fas fa-user"></i>
+        </button>
+        <button class="btn btn-outline-light btn-sm ml-4 rounded-circle">
+          <i class="fas fa-search"></i>
+        </button>
+        <button class="btn btn-outline-light btn-sm ml-4 rounded-circle">
+          <i class="fas fa-at"></i>
+        </button>
+        <button
+          id="btn-notification"
+          class="btn btn-outline-light btn-sm ml-4 rounded-circle"
+        >
+          <i class="fas fa-bell"></i>
+          <span class="badge-notification px-1">4</span>
+        </button>
+      </div>
+    </div>
+  </div>
 </div>

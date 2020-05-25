@@ -37,3 +37,18 @@
   // height: 100vh;
   background-color: blue;
 }
+
+#btn-notification {
+  position: relative;
+}
+
+.badge-notification {
+  position: absolute;
+  border: 1px solid $secondary;
+  bottom: -5px;
+  right: -5px;
+  font-size: x-small;
+  border-radius: 50%;
+  color: $black;
+  background-color: $light;
+}
