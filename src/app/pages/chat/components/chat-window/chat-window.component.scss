@@ -1,0 +1,39 @@
+#chat-title {
+  position: fixed;
+  top: 0px;
+  height: 80px;
+}
+#msg-window {
+  height: 100vh;
+  overflow-y: auto;
+  p {
+    margin-top: 10px;
+  }
+}
+
+#chat-input {
+  height: 50px;
+  position: fixed;
+  bottom: 0px;
+  // a {
+  //   border: 3px solid #bada55;
+  // }
+  textarea {
+    border-radius: 1rem;
+  }
+}
+
+#top-bar {
+  border-radius: 15px 0 0 0;
+}
+#green-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  border-radius: 15px 0 0 0;
+  background-color: whitesmoke;
+  // overflow: hidden;
+}

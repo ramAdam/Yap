@@ -1,0 +1,12 @@
+@import "../../../../../styles/variables.scss";
+
+.chatroom-list {
+  border-right: 2px solid $grey;
+  height: 90vh;
+  overflow-y: scroll;
+
+  .chatroom-list-item {
+    padding: 1em;
+    border-bottom: 2px solid $light-grey;
+  }
+}

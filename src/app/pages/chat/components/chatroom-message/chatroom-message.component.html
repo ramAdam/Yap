@@ -1,0 +1,29 @@
+<div class="container my-2">
+  <div class="row">
+    <div class="col-3">
+      <img
+        [src]="message.sender.photoUrl"
+        class="rounded-circle w-75 mx-auto d-block"
+        alt=""
+      />
+    </div>
+    <div class="col-9 p-2 text-dark">
+      <h5 class="mb-0">{{ message.sender.firstName }}</h5>
+      <small class="mt-0 text-muted">{{ message.createdAt | date }}</small>
+
+      <p class="mt-1 bg-light p-3 rounded">
+        {{ message.message }}
+      </p>
+    </div>
+  </div>
+</div>
+<!-- <div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Card Title</h4>
+    <h6 class="card-subtitle text-muted">card subtitle</h6>
+    <p class="card-text">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, quas.
+    </p>
+    <a class="btn btn-outline-primary" href="#link">Read More</a>
+  </div>
+</div> -->

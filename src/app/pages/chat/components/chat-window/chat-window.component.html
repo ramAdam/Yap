@@ -1,0 +1,59 @@
+<div
+  id="green-div"
+  [@slide]="isOpen ? 'open' : 'close'"
+  class="border border-primary container"
+>
+  <!-- top fixed bar -->
+  <div id="top-bar" class="row d-flex flex-row border bg-primary p-1">
+    <div class="col-5 d-flex flex-row p-0">
+      <div class="mr-1 align-self-center">
+        <button
+          class="btn btn-secondary btn-sm rounded-circle"
+          (click)="toggleAnimation()"
+        >
+          <i
+            [ngClass]="isOpen ? 'fas fa-angle-right' : 'fas fa-angle-left'"
+          ></i>
+        </button>
+      </div>
+      <div class="h6 text-white ml-1 text-nowrap align-self-end">
+        <strong># help-1</strong>
+      </div>
+    </div>
+
+    <div class="col-7 d-flex justify-content-end">
+      <button class="btn btn-primary btn-sm">
+        <i class="fas fa-search text-white"></i>
+      </button>
+      <button class="btn btn-primary btn-sm">
+        <i class="fas fa-user-friends text-white"></i>
+      </button>
+    </div>
+  </div>
+  <!-- chat messages -->
+  <div id="msg-window" class="overflow-auto">
+    <app-chatroom-message [message]="dummyData[0]"></app-chatroom-message>
+  </div>
+  <!-- chat bottom bar -->
+  <div id="btm-nav" class="container fixed-bottom mb-1">
+    <div class="row b p-1" [@pop]="isOpen ? 'show' : 'hide'">
+      <!-- buttons -->
+      <div class="col-3 d-flex flex-row justify-content-start">
+        <button class="btn btn-secondary btn-sm rounded-circle">
+          <i class="fas fa-camera-retro"></i>
+        </button>
+        <button class="btn btn-secondary btn-sm rounded-circle ml-1">
+          <i class="fas fa-image"></i>
+        </button>
+      </div>
+      <!-- text area -->
+      <div class="col-9 d-flex flex-row">
+        <textarea
+          cols="30"
+          rows="1"
+          class="border bg-light border-dark rounded-pill"
+        ></textarea>
+      </div>
+    </div>
+  </div>
+</div>
